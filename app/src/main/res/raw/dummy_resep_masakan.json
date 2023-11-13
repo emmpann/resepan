@@ -1,0 +1,296 @@
+[
+  {
+    "nama": "Nasi Goreng",
+    "bahan": [
+      "Nasi dingin",
+      "Minyak goreng",
+      "Bawang putih",
+      "Bawang merah",
+      "Daun bawang",
+      "Kecap manis",
+      "Garam",
+      "Merica",
+      "Telur",
+      "Ayam",
+      "Udang"
+    ],
+    "cara_memasak": [
+      "Tumis bawang putih dan bawang merah hingga harum.",
+      "Masukkan nasi dan aduk rata.",
+      "Tambahkan kecap, garam, dan merica sesuai selera.",
+      "Bisa ditambahkan telur, ayam, dan udang jika diinginkan."
+    ]
+  },
+  {
+    "nama": "Sate Ayam",
+    "bahan": [
+      "Daging ayam",
+      "Bumbu sate",
+      "Tusuk sate"
+    ],
+    "cara_memasak": [
+      "Potong ayam menjadi dadu.",
+      "Rendam daging dalam bumbu sate selama beberapa jam.",
+      "Tusuk daging dengan tusuk sate.",
+      "Panggang hingga matang."
+    ]
+  },
+  {
+    "nama": "Rendang",
+    "bahan": [
+      "Daging sapi",
+      "Santan",
+      "Serai",
+      "Daun jeruk",
+      "Daun salam",
+      "Bumbu rendang (cabe, bawang, ketumbar, kunyit)"
+    ],
+    "cara_memasak": [
+      "Rebus daging dalam santan dan bumbu rendang.",
+      "Tambahkan serai, daun jeruk, dan daun salam.",
+      "Masak hingga daging empuk dan kuah mengental."
+    ]
+  },
+  {
+    "nama": "Gado-gado",
+    "bahan": [
+      "Sayuran (kentang, tauge, kacang panjang, bayam)",
+      "Tahu dan tempe goreng",
+      "Telur rebus",
+      "Bumbu kacang (kacang tanah, cabe, terasi)",
+      "Lalap (mentimun, kubis, tomat)"
+    ],
+    "cara_memasak": [
+      "Rebus sayuran dan telur.",
+      "Sajikan dengan tahu dan tempe goreng.",
+      "Siram dengan bumbu kacang."
+    ]
+  },
+  {
+    "nama": "Soto Ayam",
+    "bahan": [
+      "Ayam",
+      "Bumbu soto (jahe, bawang putih, merica)",
+      "Bahan pelengkap (bihun, tauge, seledri)"
+    ],
+    "cara_memasak": [
+      "Rebus ayam dengan bumbu soto hingga matang.",
+      "Suwir-suwir ayam.",
+      "Sajikan dengan bihun dan bahan pelengkap."
+    ]
+  },
+  {
+    "nama": "Ayam Goreng Kalasan",
+    "bahan": [
+      "Ayam potong",
+      "Bumbu kalasan (kelapa parut, kelapa serut, bawang, kunyit)",
+      "Daun salam",
+      "Daun jeruk"
+    ],
+    "cara_memasak": [
+      "Balur ayam dengan bumbu kalasan.",
+      "Goreng hingga kecokelatan.",
+      "Sajikan dengan daun salam dan daun jeruk."
+    ]
+  },
+  {
+    "nama": "Pecel Lele",
+    "bahan": [
+      "Lele",
+      "Bumbu pecel (kacang tanah, cabe, terasi)",
+      "Lalap"
+    ],
+    "cara_memasak": [
+      "Goreng lele hingga crispy.",
+      "Haluskan bumbu pecel.",
+      "Sajikan dengan lalap."
+    ]
+  },
+  {
+    "nama": "Bakso",
+    "bahan": [
+      "Daging sapi giling",
+      "Tepung tapioka",
+      "Es batu",
+      "Bumbu kuah (kaldu, bawang putih, kecap, saus sambal)"
+    ],
+    "cara_memasak": [
+      "Campur daging sapi giling dengan tepung tapioka dan es batu.",
+      "Bentuk bulat dan rebus.",
+      "Sajikan dengan kuah dan mie."
+    ]
+  },
+  {
+    "nama": "Ikan Pepes",
+    "bahan": [
+      "Ikan",
+      "Bumbu pepes (cabe, terasi, daun jeruk, daun salam)",
+      "Daun pisang untuk membungkus"
+    ],
+    "cara_memasak": [
+      "Haluskan bumbu pepes.",
+      "Balut ikan dengan bumbu, bungkus dengan daun pisang.",
+      "Panggang hingga matang."
+    ]
+  },
+  {
+    "nama": "Sayur Asem",
+    "bahan": [
+      "Sayuran (kacang panjang, jagung, labu siam)",
+      "Asam Jawa",
+      "Bumbu (bawang, cabe, terasi, gula, garam)"
+    ],
+    "cara_memasak": [
+      "Rebus sayuran dengan bumbu hingga matang.",
+      "Tambahkan asam Jawa sesuai selera."
+    ]
+  },
+  {
+    "nama": "Sambal Matah",
+    "bahan": [
+      "Bawang merah",
+      "Bawang putih",
+      "Cabe rawit",
+      "Jeruk nipis",
+      "Garam",
+      "Gula"
+    ],
+    "cara_memasak": [
+      "Iris bawang dan cabe, campur dengan garam dan gula.",
+      "Tambahkan perasan jeruk nipis."
+    ]
+  },
+  {
+    "nama": "Nasi Liwet",
+    "bahan": [
+      "Nasi",
+      "Santan",
+      "Daun salam",
+      "Serai",
+      "Daun jeruk",
+      "Ayam",
+      "Tahu",
+      "Tempe"
+    ],
+    "cara_memasak": [
+      "Masak nasi dengan santan dan bumbu lainnya.",
+      "Sajikan dengan ayam, tahu, dan tempe."
+    ]
+  },
+  {
+    "nama": "Sop Buntut",
+    "bahan": [
+      "Buntut sapi",
+      "Wortel",
+      "Kentang",
+      "Seledri",
+      "Bumbu sop (bawang, merica, daun bawang)"
+    ],
+    "cara_memasak": [
+      "Rebus buntut hingga empuk.",
+      "Tambahkan sayuran dan bumbu sop.",
+      "Sajikan dengan seledri."
+    ]
+  },
+  {
+    "nama": "Pempek",
+    "bahan": [
+      "Ikan tenggiri",
+      "Tepung sagu",
+      "Air",
+      "Cuko (gula, air asam jawa, bawang, cabe)"
+    ],
+    "cara_memasak": [
+      "Haluskan ikan tenggiri, campur dengan tepung sagu, air, dan garam.",
+      "Bentuk dan rebus.",
+      "Sajikan dengan cuko."
+    ]
+  },
+  {
+    "nama": "Martabak Telur",
+    "bahan": [
+      "Kulit lumpia",
+      "Telur",
+      "Daging cincang",
+      "Bawang",
+      "Daun bawang",
+      "Acar",
+      "Saus kacang"
+    ],
+    "cara_memasak": [
+      "Campur telur, daging cincang, bawang, dan daun bawang.",
+      "Bungkus dengan kulit lumpia dan goreng.",
+      "Sajikan dengan acar dan saus kacang."
+    ]
+  },
+  {
+    "nama": "Es Campur",
+    "bahan": [
+      "Cincau",
+      "Kelapa muda",
+      "Alpukat",
+      "Nangka",
+      "Sirup cocopandan",
+      "Es serut",
+      "Susu kental manis"
+    ],
+    "cara_memasak": [
+      "Campur semua bahan dalam mangkuk besar.",
+      "Tambahkan es serut dan susu kental manis."
+    ]
+  },
+  {
+    "nama": "Rujak Buah",
+    "bahan": [
+      "Buah-buahan (mangga, jambu, nanas)",
+      "Bumbu rujak (cabai, gula, kacang tanah, terasi)"
+    ],
+    "cara_memasak": [
+      "Iris buah-buahan dan campur dengan bumbu rujak.",
+      "Sajikan dengan kuah rujak."
+    ]
+  },
+  {
+    "nama": "Lontong Sayur",
+    "bahan": [
+      "Lontong",
+      "Sayur (labu siam, tauge, tahu)",
+      "Kelapa parut",
+      "Bumbu lontong"
+    ],
+    "cara_memasak": [
+      "Rebus sayuran dengan bumbu lontong.",
+      "Sajikan dengan lontong dan kelapa parut."
+    ]
+  },
+  {
+    "nama": "Pisang Goreng",
+    "bahan": [
+      "Pisang raja",
+      "Tepung terigu",
+      "Air",
+      "Gula",
+      "Garam",
+      "Minyak goreng"
+    ],
+    "cara_memasak": [
+      "Potong pisang, celupkan dalam adonan tepung, goreng hingga kecokelatan.",
+      "Tiriskan dan sajikan."
+    ]
+  },
+  {
+    "nama": "Ketoprak",
+    "bahan": [
+      "Ketupat",
+      "Tahu",
+      "Tauge",
+      "Bihun",
+      "Bumbu ketoprak"
+    ],
+    "cara_memasak": [
+      "Rebus tahu, tauge, dan bihun.",
+      "Campur dengan bumbu ketoprak.",
+      "Sajikan dengan ketupat."
+    ]
+  }
+]

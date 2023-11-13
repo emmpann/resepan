@@ -2,44 +2,73 @@ package com.github.emmpann.resepan.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.DateRange
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
+import com.github.emmpann.resepan.R
 import com.github.emmpann.resepan.ui.theme.ResepanTheme
+import com.github.emmpann.resepan.ui.theme.Shapes
 
 @Composable
 fun FoodItem(
     imageUrl: String,
     title: String,
-    desc: String,
+    time: String,
+    rating: Float,
     modifier: Modifier = Modifier,
 ) {
-    Column(modifier = modifier) {
+    Column(modifier = modifier.clip(Shapes.medium)) {
         Image(
             painter = rememberAsyncImagePainter(model = imageUrl),
             contentDescription = null,
-            modifier = Modifier.size(100.dp)
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .size(170.dp)
         )
-        Text(
-            text = title,
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis,
-            style = MaterialTheme.typography.titleMedium.copy(
-                fontWeight = FontWeight.ExtraBold
+        Column(modifier = modifier.padding(vertical = 8.dp, horizontal = 16.dp)) {
+            Text(
+                text = title,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+                style = MaterialTheme.typography.titleMedium
             )
-        )
-        Text(
-            text = desc,
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis,
-            style = MaterialTheme.typography.titleSmall)
+            Row {
+                Icon(
+                    imageVector = ImageVector.vectorResource(R.drawable.baseline_access_time_24),
+                    contentDescription = null
+                )
+                Spacer(modifier = modifier.width(8.dp))
+                Text(text = time)
+            }
+            Row {
+                Icon(
+                    imageVector = Icons.Default.Star,
+                    contentDescription = null,
+                    tint = Color.Yellow
+                )
+                Spacer(modifier = modifier.width(8.dp))
+                Text(text = rating.toString())
+            }
+        }
     }
 }
 
@@ -50,7 +79,8 @@ fun FoodItemPreview() {
         FoodItem(
             imageUrl = "https://img.kurio.network/77GSRizkh7ZeT0cp7P8j1JG0ziY=/440x440/filters:quality(80):watermark(https://kurio-img.kurioapps.com/21/04/15/df401e7c-7b29-428a-9a16-aad1fafe07a1.png,0,5p,0,22)/https://kurio-img.kurioapps.com/20/10/10/a7e9eaa0-1c22-42b0-a11f-0a5ad1d30126.jpeg",
             title = "Nasi goreng",
-            desc = "Nasi goreng adalah hidangan Indonesia yang terdiri dari nasi yang digoreng bersama dengan bumbu-bumbu seperti bawang, cabai, kecap, dan tambahan seperti telur, daging, atau sayuran. Hidangan ini memiliki rasa gurih dan sedikit pedas, dan sering disajikan dengan acar, kerupuk, dan irisan mentimun sebagai pelengkap. Nasi goreng merupakan salah satu makanan yang populer dan dapat ditemukan di banyak warung makan dan restoran di Indonesia."
+            time = "20 menit",
+            rating = 2.3f
         )
     }
 }

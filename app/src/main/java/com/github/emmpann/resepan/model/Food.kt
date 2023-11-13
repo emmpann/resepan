@@ -4,5 +4,6 @@ data class Food(
     val id: Long,
     val image: Int,
     val title: String,
-    val receipt: String,
+    val ingredients: ArrayList<String>,
+    val ways: ArrayList<String>
 )
