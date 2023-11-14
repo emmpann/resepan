@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Star
@@ -23,7 +24,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.ui.draw.clip
@@ -31,7 +32,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -55,8 +56,9 @@ fun DetailScreen(
     viewModel: DetailFoodViewModel = viewModel(
         factory = ViewModelFactory(Injection.provideRepository(LocalContext.current))
     ),
+    navigateBack: () -> Unit,
 ) {
-    val isFavorite by remember { viewModel.isFavorite }
+    val isFavorite by viewModel.isFavorite
 
     viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
         when (uiState) {
@@ -66,12 +68,15 @@ fun DetailScreen(
 
             is UiState.Success -> {
                 val data = uiState.data
+
                 viewModel.getFavoriteRecipe(data.id)
+
                 DetailContent(
+                    onCheckedChange = { viewModel.saveFavoriteRecipe(data) },
+                    onBackClick = navigateBack,
                     imageUrl = data.imageUrl,
                     name = data.name,
                     isFavorite = isFavorite,
-                    onCheckedChange = { viewModel.saveFavoriteRecipe(data) },
                     time = "20 menit",
                     rating = "4.5",
                     ingredients = contentFormat(data.ingredients),
@@ -86,10 +91,11 @@ fun DetailScreen(
 
 @Composable
 fun DetailContent(
+    onCheckedChange: (Boolean) -> Unit,
+    onBackClick: () -> Unit,
     imageUrl: String,
     name: String,
     isFavorite: Boolean,
-    onCheckedChange: (Boolean) -> Unit,
     time: String,
     rating: String,
     ingredients: String,
@@ -104,36 +110,49 @@ fun DetailContent(
     )
 
     Column(
-        modifier = modifier.padding(16.dp)
+        modifier = modifier
+            .padding(16.dp)
     ) {
-        Text(
-            text = name,
-            style = MaterialTheme.typography.titleLarge.copy(
-                fontWeight = FontWeight.Bold
-            ),
-            textAlign = TextAlign.Center,
+        Box(
             modifier = Modifier
                 .padding(bottom = 8.dp)
-                .fillMaxWidth()
-        )
+                .fillMaxWidth(),
+        ) {
+            Icon(
+                imageVector = Icons.Default.ArrowBack,
+                contentDescription = stringResource(R.string.back),
+                modifier = Modifier
+                    .align(Alignment.CenterStart)
+                    .clickable { onBackClick() }
+            )
+            Text(
+                text = name,
+                style = MaterialTheme.typography.titleLarge.copy(
+                    fontWeight = FontWeight.Bold
+                ),
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+            )
+        }
         Column(
             modifier = Modifier
                 .verticalScroll(rememberScrollState())
                 .weight(1f)
         ) {
             Image(
-                painter = painter,//painterResource(id = R.drawable.nasgor_image),
+                painter = painter,
                 contentScale = ContentScale.Crop,
-                contentDescription = "food_image",
+                contentDescription = stringResource(R.string.food_image),
                 modifier = Modifier
                     .fillMaxWidth()
                     .clip(Shapes.large)
             )
             Row(
                 modifier = Modifier
-                    .padding(top = 16.dp, bottom = 8.dp)
                     .fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
             ) {
                 Row {
                     Row {
@@ -163,15 +182,14 @@ fun DetailContent(
                 }
                 FavoriteButton(isFavorite = isFavorite, onCheckedChange = onCheckedChange)
             }
-
             Column {
                 Text(
-                    text = "Bahan Utama",
+                    text = stringResource(R.string.ingredients_title),
                     style = MaterialTheme.typography.titleMedium
                 )
                 Text(ingredients)
                 Text(
-                    text = "Cara Memasak",
+                    text = stringResource(R.string.how_to_cook_title),
                     style = MaterialTheme.typography.titleMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -187,7 +205,10 @@ fun FavoriteButton(
     onCheckedChange: (Boolean) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    IconToggleButton(checked = isFavorite, onCheckedChange = onCheckedChange) {
+    IconToggleButton(
+        checked = isFavorite,
+        onCheckedChange = onCheckedChange
+    ) {
         Icon(
             imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
             contentDescription = null,
@@ -199,6 +220,6 @@ fun FavoriteButton(
 @Composable
 fun DetailContentPreview() {
     ResepanTheme {
-        DetailScreen(1)
+        DetailScreen(1, navigateBack = { })
     }
 }

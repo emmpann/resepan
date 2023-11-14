@@ -1,15 +1,12 @@
 package com.github.emmpann.resepan.data
 
 import android.content.Context
-import android.util.Log
 import com.github.emmpann.resepan.R
 import com.github.emmpann.resepan.model.FakeFavoriteRecipe
 import com.github.emmpann.resepan.model.Food
 import com.github.emmpann.resepan.model.Recipe
-import com.github.emmpann.resepan.ui.common.UiState
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOf
 
 class FoodRepository(context: Context) {
@@ -46,14 +43,13 @@ class FoodRepository(context: Context) {
         favoriteRecipes.add(food)
     }
 
-    fun getFavoriteRecipes(foodId: Int): Flow<Food?> = flowOf(favoriteRecipes.find { it.id == foodId })
+    fun getFavoriteRecipes(foodId: Int): Flow<Food?> =
+        flowOf(favoriteRecipes.find { it.id == foodId })
 
     fun getAllFavoriteRecipes(): Flow<List<Food>> = flowOf(favoriteRecipes)
     fun deleteFavoriteRecipe(foodId: Int) {
         favoriteRecipes.removeIf { it.id == foodId }
     }
-
-    //fun checkFavoriteRecipe(): Boolean = flowOf()
 
     companion object {
         @Volatile

@@ -78,10 +78,13 @@ fun ResepanApp(
             }
             composable(
                 route = Screen.DetailFood.route,
-                arguments = listOf(navArgument("foodId") {type = NavType.IntType}),
+                arguments = listOf(navArgument("foodId") { type = NavType.IntType }),
             ) {
                 val id = it.arguments?.getInt("foodId") ?: -1
-                DetailScreen(id)
+                DetailScreen(
+                    foodId = id,
+                    navigateBack = { navController.navigateUp() }
+                )
             }
         }
     }

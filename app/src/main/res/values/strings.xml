@@ -4,4 +4,8 @@
     <string name="menu_favortie">Favorite</string>
     <string name="menu_about">About</string>
     <string name="data_is_not_found">data tidak ditemukan</string>
+    <string name="food_image">gambar makanan</string>
+    <string name="ingredients_title">Bahan Utama</string>
+    <string name="how_to_cook_title">Cara Memasak</string>
+    <string name="back">kembali</string>
 </resources>
