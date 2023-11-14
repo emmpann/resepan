@@ -36,6 +36,7 @@ import com.github.emmpann.resepan.ui.navigation.NavigationItem
 import com.github.emmpann.resepan.ui.navigation.Screen
 import com.github.emmpann.resepan.ui.screen.about.AboutScreen
 import com.github.emmpann.resepan.ui.screen.detail.DetailScreen
+import com.github.emmpann.resepan.ui.screen.favorite.FavoriteScreen
 import com.github.emmpann.resepan.ui.screen.home.HomeScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -68,7 +69,9 @@ fun ResepanApp(
                 )
             }
             composable(Screen.Favorite.route) {
-
+                FavoriteScreen(navigateToDetail = { foodId ->
+                    navController.navigate(Screen.DetailFood.createRoute(foodId))
+                })
             }
             composable(Screen.About.route) {
                 AboutScreen()

@@ -1,6 +1,8 @@
 package com.github.emmpann.resepan.ui.screen.detail
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -11,12 +13,17 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconToggleButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.ui.draw.clip
@@ -49,6 +56,8 @@ fun DetailScreen(
         factory = ViewModelFactory(Injection.provideRepository(LocalContext.current))
     ),
 ) {
+    val isFavorite by remember { viewModel.isFavorite }
+
     viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
         when (uiState) {
             is UiState.Loading -> {
@@ -57,9 +66,12 @@ fun DetailScreen(
 
             is UiState.Success -> {
                 val data = uiState.data
+                viewModel.getFavoriteRecipe(data.id)
                 DetailContent(
                     imageUrl = data.imageUrl,
                     name = data.name,
+                    isFavorite = isFavorite,
+                    onCheckedChange = { viewModel.saveFavoriteRecipe(data) },
                     time = "20 menit",
                     rating = "4.5",
                     ingredients = contentFormat(data.ingredients),
@@ -76,6 +88,8 @@ fun DetailScreen(
 fun DetailContent(
     imageUrl: String,
     name: String,
+    isFavorite: Boolean,
+    onCheckedChange: (Boolean) -> Unit,
     time: String,
     rating: String,
     ingredients: String,
@@ -118,31 +132,36 @@ fun DetailContent(
             Row(
                 modifier = Modifier
                     .padding(top = 16.dp, bottom = 8.dp)
+                    .fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Row {
-                    Icon(
-                        imageVector = Icons.Default.Star,
-                        contentDescription = null,
-                        tint = Color.Yellow
-                    )
-                    Spacer(modifier = modifier.width(8.dp))
-                    Text(
-                        text = rating,
-                        style = MaterialTheme.typography.titleMedium
-                    )
+                    Row {
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = null,
+                            tint = Color.Yellow
+                        )
+                        Spacer(modifier = modifier.width(8.dp))
+                        Text(
+                            text = rating,
+                            style = MaterialTheme.typography.titleMedium
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(16.dp))
+                    Row {
+                        Icon(
+                            imageVector = ImageVector.vectorResource(R.drawable.baseline_access_time_24),
+                            contentDescription = null
+                        )
+                        Spacer(modifier = modifier.width(8.dp))
+                        Text(
+                            text = time,
+                            style = MaterialTheme.typography.titleMedium
+                        )
+                    }
                 }
-                Spacer(modifier = Modifier.width(16.dp))
-                Row {
-                    Icon(
-                        imageVector = ImageVector.vectorResource(R.drawable.baseline_access_time_24),
-                        contentDescription = null
-                    )
-                    Spacer(modifier = modifier.width(8.dp))
-                    Text(
-                        text = time,
-                        style = MaterialTheme.typography.titleMedium
-                    )
-                }
+                FavoriteButton(isFavorite = isFavorite, onCheckedChange = onCheckedChange)
             }
 
             Column {
@@ -162,17 +181,24 @@ fun DetailContent(
     }
 }
 
+@Composable
+fun FavoriteButton(
+    isFavorite: Boolean,
+    onCheckedChange: (Boolean) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    IconToggleButton(checked = isFavorite, onCheckedChange = onCheckedChange) {
+        Icon(
+            imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
+            contentDescription = null,
+        )
+    }
+}
+
 @Preview(showBackground = true, device = Devices.PIXEL_4)
 @Composable
 fun DetailContentPreview() {
     ResepanTheme {
-        DetailContent(
-            imageUrl = "https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/07/13073811/Praktis-dengan-Bahan-Sederhana-Ini-Resep-Nasi-Goreng-Special-1.jpg.webp",
-            name = "Pisang Goreng",
-            time = "25 menit",
-            rating = "5.0",
-            ingredients = "- Pisang\n- Tepung serbaguna\n- Minyak goreng",
-            ways = "- Siapkan tepung basah\n- Potong pisang sesuai selera\n- Baluri pisang dengan tepung basah\n- Goreng hingga golden brown"
-        )
+        DetailScreen(1)
     }
 }

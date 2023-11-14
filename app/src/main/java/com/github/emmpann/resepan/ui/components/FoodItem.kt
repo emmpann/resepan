@@ -9,9 +9,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -40,42 +42,56 @@ fun FoodItem(
     rating: Float,
     modifier: Modifier = Modifier,
 ) {
-    Column(modifier = modifier) {
-        Image(
-            painter = rememberAsyncImagePainter(model = imageUrl),
-            contentDescription = null,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier
-                .height(170.dp)
-                .clip(Shapes.medium)
-        )
-        Column(
-            modifier = modifier
-                .padding(vertical = 8.dp, horizontal = 16.dp)
-                .fillMaxWidth()
-        ) {
-            Text(
-                text = title,
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis,
-                style = MaterialTheme.typography.titleMedium
+    Card(
+        modifier = modifier,
+        shape = RoundedCornerShape(8.dp)
+    ) {
+        Column(modifier = modifier) {
+            Image(
+                painter = rememberAsyncImagePainter(model = imageUrl),
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(160.dp)
+                    .clip(Shapes.medium)
             )
-            Row {
-                Icon(
-                    imageVector = ImageVector.vectorResource(R.drawable.baseline_access_time_24),
-                    contentDescription = null
+            Column(
+                modifier = modifier
+                    .padding(vertical = 8.dp, horizontal = 16.dp)
+                    .fillMaxWidth()
+            ) {
+                Text(
+                    text = title,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                    style = MaterialTheme.typography.titleMedium
                 )
-                Spacer(modifier = modifier.width(8.dp))
-                Text(text = time)
-            }
-            Row {
-                Icon(
-                    imageVector = Icons.Default.Star,
-                    contentDescription = null,
-                    tint = Color.Yellow
-                )
-                Spacer(modifier = modifier.width(8.dp))
-                Text(text = rating.toString())
+                Row {
+                    Icon(
+                        imageVector = ImageVector.vectorResource(R.drawable.baseline_access_time_24),
+                        contentDescription = null,
+                        modifier = Modifier.size(18.dp)
+                    )
+                    Spacer(modifier = modifier.width(8.dp))
+                    Text(
+                        text = time,
+                        style = MaterialTheme.typography.titleSmall
+                    )
+                }
+                Row {
+                    Icon(
+                        imageVector = Icons.Default.Star,
+                        contentDescription = null,
+                        tint = Color.Yellow,
+                        modifier = Modifier.size(18.dp)
+                    )
+                    Spacer(modifier = modifier.width(8.dp))
+                    Text(
+                        text = rating.toString(),
+                        style = MaterialTheme.typography.titleSmall
+                    )
+                }
             }
         }
     }
