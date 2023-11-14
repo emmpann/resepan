@@ -8,4 +8,10 @@
     <string name="ingredients_title">Bahan Utama</string>
     <string name="how_to_cook_title">Cara Memasak</string>
     <string name="back">kembali</string>
+    <string name="time_format">%d menit</string>
+    <string name="searchbar_hint_text">Cari menu masakan</string>
+    <string name="avatar_description">avatar</string>
+    <string name="avatar_url">https://avatars.githubusercontent.com/u/87558302?v=4</string>
+    <string name="user_name">Efan Fitriyan</string>
+    <string name="user_email">mhdepan@gmail.com</string>
 </resources>

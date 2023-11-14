@@ -1,6 +1,5 @@
 package com.github.emmpann.resepan.ui.screen.favorite
 
-import android.util.Log
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -8,7 +7,6 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -68,14 +66,13 @@ fun FavoriteContent(
             verticalArrangement = Arrangement.spacedBy(16.dp),
             modifier = modifier
         ) {
-            Log.d("fav recipe", favRecipe.size.toString())
             if (favRecipe.isNotEmpty()) {
                 items(favRecipe) { data ->
                     FoodItem(
                         id = data.id,
                         imageUrl = data.imageUrl,
                         title = data.name,
-                        time = "20 minute",
+                        time = 20,
                         rating = 5f,
                         modifier = Modifier.clickable {
                             navigateToDetail(data.id)

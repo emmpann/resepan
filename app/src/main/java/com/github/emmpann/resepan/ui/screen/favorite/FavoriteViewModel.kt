@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
 
 class FavoriteViewModel(
-    val repository: FoodRepository
+    private val repository: FoodRepository
 ) : ViewModel() {
     private val _uiState: MutableStateFlow<UiState<List<Food>>> = MutableStateFlow(UiState.Loading)
     val uiState: StateFlow<UiState<List<Food>>> get() = _uiState

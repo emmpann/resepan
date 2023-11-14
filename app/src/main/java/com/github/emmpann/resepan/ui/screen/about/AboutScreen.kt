@@ -11,9 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
+import com.github.emmpann.resepan.R
 import com.github.emmpann.resepan.ui.theme.ResepanTheme
 
 @Composable
@@ -26,19 +28,19 @@ fun AboutScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
-            painter = rememberAsyncImagePainter(model = "https://avatars.githubusercontent.com/u/87558302?v=4"),
-            contentDescription = "avatar",
+            painter = rememberAsyncImagePainter(model = stringResource(R.string.avatar_url)),
+            contentDescription = stringResource(R.string.avatar_description),
             modifier = Modifier
                 .padding(top = 48.dp, bottom = 16.dp)
                 .clip(CircleShape)
         )
         Text(
-            text = "Efan Fitriyan",
+            text = stringResource(R.string.user_name),
             style = MaterialTheme.typography.titleMedium,
             modifier = Modifier
                 .padding(bottom = 8.dp)
         )
-        Text(text = "mhdepan@gmail.com")
+        Text(text = stringResource(R.string.user_email))
     }
 }
 

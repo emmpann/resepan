@@ -77,8 +77,8 @@ fun DetailScreen(
                     imageUrl = data.imageUrl,
                     name = data.name,
                     isFavorite = isFavorite,
-                    time = "20 menit",
-                    rating = "4.5",
+                    time = 20,
+                    rating = 4.8f,
                     ingredients = contentFormat(data.ingredients),
                     ways = contentFormat(data.ways)
                 )
@@ -96,8 +96,8 @@ fun DetailContent(
     imageUrl: String,
     name: String,
     isFavorite: Boolean,
-    time: String,
-    rating: String,
+    time: Int,
+    rating: Float,
     ingredients: String,
     ways: String,
     modifier: Modifier = Modifier,
@@ -163,7 +163,7 @@ fun DetailContent(
                         )
                         Spacer(modifier = modifier.width(8.dp))
                         Text(
-                            text = rating,
+                            text = rating.toString(),
                             style = MaterialTheme.typography.titleMedium
                         )
                     }
@@ -175,7 +175,7 @@ fun DetailContent(
                         )
                         Spacer(modifier = modifier.width(8.dp))
                         Text(
-                            text = time,
+                            text = String.format(stringResource(id = R.string.time_format), time),
                             style = MaterialTheme.typography.titleMedium
                         )
                     }

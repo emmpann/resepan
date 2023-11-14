@@ -74,8 +74,8 @@ fun HomeContent(
                     id = data.id,
                     imageUrl = data.imageUrl,
                     title = data.name,
-                    time = "20 minute",
-                    rating = 5f,
+                    time = 20,
+                    rating = 4.8f,
                     modifier = Modifier.clickable {
                         navigateToDetail(data.id)
                     }

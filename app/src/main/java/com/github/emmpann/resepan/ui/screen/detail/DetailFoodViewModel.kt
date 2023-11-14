@@ -1,12 +1,10 @@
 package com.github.emmpann.resepan.ui.screen.detail
 
 import androidx.compose.runtime.State
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.emmpann.resepan.data.FoodRepository
-import com.github.emmpann.resepan.model.FakeFavoriteRecipe
 import com.github.emmpann.resepan.model.Food
 import com.github.emmpann.resepan.ui.common.UiState
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -46,7 +44,7 @@ class DetailFoodViewModel(
         }
     }
 
-    fun deleteFavoriteRecipe(foodId: Int) {
+    private fun deleteFavoriteRecipe(foodId: Int) {
         viewModelScope.launch {
             repository.deleteFavoriteRecipe(foodId)
         }
