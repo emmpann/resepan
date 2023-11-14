@@ -30,6 +30,7 @@ import com.github.emmpann.resepan.ui.theme.Shapes
 
 @Composable
 fun FoodItem(
+    id: Int,
     imageUrl: String,
     title: String,
     time: String,
@@ -77,6 +78,7 @@ fun FoodItem(
 fun FoodItemPreview() {
     ResepanTheme {
         FoodItem(
+            id = 0,
             imageUrl = "https://img.kurio.network/77GSRizkh7ZeT0cp7P8j1JG0ziY=/440x440/filters:quality(80):watermark(https://kurio-img.kurioapps.com/21/04/15/df401e7c-7b29-428a-9a16-aad1fafe07a1.png,0,5p,0,22)/https://kurio-img.kurioapps.com/20/10/10/a7e9eaa0-1c22-42b0-a11f-0a5ad1d30126.jpeg",
             title = "Nasi goreng",
             time = "20 menit",

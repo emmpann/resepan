@@ -20,14 +20,18 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.github.emmpann.resepan.R
 import com.github.emmpann.resepan.ui.theme.ResepanTheme
 import com.github.emmpann.resepan.ui.theme.navigation.NavigationItem
 import com.github.emmpann.resepan.ui.theme.navigation.Screen
+import com.github.emmpann.resepan.ui.theme.screen.about.AboutScreen
+import com.github.emmpann.resepan.ui.theme.screen.home.HomeScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -52,15 +56,25 @@ fun ResepanApp(
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(Screen.Home.route) {
-
+                HomeScreen(
+                    navigateToDetail = { foodId ->
+                        navController.navigate(Screen.DetailFood.createRoute(foodId))
+                    }
+                )
             }
             composable(Screen.Favorite.route) {
 
             }
             composable(Screen.About.route) {
-
+                AboutScreen()
             }
-
+            composable(
+                route = Screen.DetailFood.route,
+                arguments = listOf(navArgument("foodId") {type = NavType.IntType}),
+            ) {
+                val id = it.arguments?.getInt("foodId") ?: -1
+                DetailScreen()
+            }
         }
     }
 }
