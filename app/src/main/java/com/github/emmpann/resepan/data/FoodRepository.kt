@@ -10,7 +10,9 @@ import kotlinx.coroutines.flow.flowOf
 
 class FoodRepository(context: Context) {
     private var orderFood = mutableListOf<Food>()
-    private val jsonString = context.resources.openRawResource(R.raw.dummy_resep_masakan).bufferedReader().use { it.readText() }
+    private val jsonString =
+        context.resources.openRawResource(R.raw.dummy_resep_masakan).bufferedReader()
+            .use { it.readText() }
     private val gson = Gson()
     private val recipe: Recipe = gson.fromJson(jsonString, Recipe::class.java)
 
@@ -21,6 +23,8 @@ class FoodRepository(context: Context) {
     }
 
     fun getAllRecipe(): Flow<List<Food>> = flowOf(orderFood)
+
+    fun getFoodById(foodId: Int) = orderFood.first { it.id == foodId }
 
     companion object {
         @Volatile
