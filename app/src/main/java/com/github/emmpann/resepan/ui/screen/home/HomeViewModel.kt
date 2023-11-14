@@ -1,5 +1,7 @@
-package com.github.emmpann.resepan.ui.theme.screen.home
+package com.github.emmpann.resepan.ui.screen.home
 
+import androidx.compose.runtime.State
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.github.emmpann.resepan.data.FoodRepository
@@ -18,9 +20,25 @@ class HomeViewModel(
     private val _uiState: MutableStateFlow<UiState<List<Food>>> = MutableStateFlow(UiState.Loading)
     val uiState: StateFlow<UiState<List<Food>>> get() = _uiState
 
+    private val _query = mutableStateOf("")
+    val query: State<String> get() = _query
+
     fun getAllRecipe() {
         viewModelScope.launch {
             repository.getAllRecipe()
+                .catch {
+                    _uiState.value = UiState.Error(it.message.toString())
+                }
+                .collect { orderFood ->
+                    _uiState.value = UiState.Success(orderFood)
+                }
+        }
+    }
+
+    fun search(newQuery: String) {
+        _query.value = newQuery
+        viewModelScope.launch {
+            repository.searchFood(_query.value)
                 .catch {
                     _uiState.value = UiState.Error(it.message.toString())
                 }

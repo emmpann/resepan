@@ -1,4 +1,4 @@
-package com.github.emmpann.resepan.ui.theme.navigation
+package com.github.emmpann.resepan.ui.navigation
 
 sealed class Screen(val route: String) {
     object Home : Screen("home")

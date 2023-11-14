@@ -1,4 +1,4 @@
-package com.github.emmpann.resepan.ui.theme.screen.detail
+package com.github.emmpann.resepan.ui.screen.detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

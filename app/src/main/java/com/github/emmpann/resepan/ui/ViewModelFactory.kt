@@ -3,8 +3,8 @@ package com.github.emmpann.resepan.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.github.emmpann.resepan.data.FoodRepository
-import com.github.emmpann.resepan.ui.theme.screen.detail.DetailFoodViewModel
-import com.github.emmpann.resepan.ui.theme.screen.home.HomeViewModel
+import com.github.emmpann.resepan.ui.screen.detail.DetailFoodViewModel
+import com.github.emmpann.resepan.ui.screen.home.HomeViewModel
 
 class ViewModelFactory(private val repository: FoodRepository) :
     ViewModelProvider.NewInstanceFactory() {

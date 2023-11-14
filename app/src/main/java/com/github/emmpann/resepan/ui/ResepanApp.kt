@@ -32,11 +32,11 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.github.emmpann.resepan.R
 import com.github.emmpann.resepan.ui.theme.ResepanTheme
-import com.github.emmpann.resepan.ui.theme.navigation.NavigationItem
-import com.github.emmpann.resepan.ui.theme.navigation.Screen
-import com.github.emmpann.resepan.ui.theme.screen.about.AboutScreen
-import com.github.emmpann.resepan.ui.theme.screen.detail.DetailScreen
-import com.github.emmpann.resepan.ui.theme.screen.home.HomeScreen
+import com.github.emmpann.resepan.ui.navigation.NavigationItem
+import com.github.emmpann.resepan.ui.navigation.Screen
+import com.github.emmpann.resepan.ui.screen.about.AboutScreen
+import com.github.emmpann.resepan.ui.screen.detail.DetailScreen
+import com.github.emmpann.resepan.ui.screen.home.HomeScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

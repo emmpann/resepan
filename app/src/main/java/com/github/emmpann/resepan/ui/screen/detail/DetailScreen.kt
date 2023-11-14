@@ -1,4 +1,4 @@
-package com.github.emmpann.resepan.ui.theme.screen.detail
+package com.github.emmpann.resepan.ui.screen.detail
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box

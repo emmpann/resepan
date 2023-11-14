@@ -1,4 +1,4 @@
-package com.github.emmpann.resepan.ui.theme.navigation
+package com.github.emmpann.resepan.ui.navigation
 
 import androidx.compose.ui.graphics.vector.ImageVector
 
