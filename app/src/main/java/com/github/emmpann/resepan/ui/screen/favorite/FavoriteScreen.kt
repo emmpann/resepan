@@ -68,7 +68,7 @@ fun FavoriteContent(
             modifier = modifier
         ) {
             if (favRecipe.isNotEmpty()) {
-                items(favRecipe) { data ->
+                items(favRecipe, key = {it.id}) { data ->
                     FoodItem(
                         id = data.id,
                         imageUrl = data.imageUrl,

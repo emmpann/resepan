@@ -53,6 +53,7 @@ import com.github.emmpann.resepan.ui.theme.Shapes
 
 @Composable
 fun DetailScreen(
+    modifier: Modifier = Modifier,
     foodId: Int,
     viewModel: DetailFoodViewModel = viewModel(
         factory = ViewModelFactory(Injection.provideRepository(LocalContext.current))
@@ -222,6 +223,6 @@ fun FavoriteButton(
 @Composable
 fun DetailContentPreview() {
     ResepanTheme {
-        DetailScreen(1, navigateBack = { })
+        DetailScreen(foodId = 1, navigateBack = { })
     }
 }

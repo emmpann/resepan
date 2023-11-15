@@ -49,6 +49,8 @@ fun HomeScreen(
             }
 
             is UiState.Error -> {}
+
+            else -> {}
         }
     }
 }
@@ -74,7 +76,7 @@ fun HomeContent(
             verticalArrangement = Arrangement.spacedBy(16.dp),
             modifier = modifier
         ) {
-            items(foodList) { data ->
+            items(foodList, key = {it.id}) { data ->
                 FoodItem(
                     id = data.id,
                     imageUrl = data.imageUrl,
