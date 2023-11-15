@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -39,8 +40,10 @@ fun AboutScreen(
             style = MaterialTheme.typography.titleMedium,
             modifier = Modifier
                 .padding(bottom = 8.dp)
+                .testTag("username")
         )
-        Text(text = stringResource(R.string.user_email))
+        Text(text = stringResource(R.string.user_email),
+            modifier = Modifier.testTag("user_email"))
     }
 }
 

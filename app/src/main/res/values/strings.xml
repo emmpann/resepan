@@ -14,4 +14,5 @@
     <string name="avatar_url">https://avatars.githubusercontent.com/u/87558302?v=4</string>
     <string name="user_name">Efan Fitriyan</string>
     <string name="user_email">mhdepan@gmail.com</string>
+    <string name="fav_button">favButton</string>
 </resources>

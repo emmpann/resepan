@@ -13,6 +13,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.github.emmpann.resepan.di.Injection
@@ -39,7 +40,7 @@ fun HomeScreen(
 
             is UiState.Success -> {
                 HomeContent(
-                    orderFood = uiState.data,
+                    foodList = uiState.data,
                     modifier = modifier,
                     navigateToDetail = navigateToDetail,
                     query = query,
@@ -54,14 +55,18 @@ fun HomeScreen(
 
 @Composable
 fun HomeContent(
-    orderFood: List<Food>,
+    foodList: List<Food>,
     navigateToDetail: (Int) -> Unit,
     query: String,
     onQueryChange: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column {
-        SearchBar(query = query, onQueryChange = onQueryChange)
+        SearchBar(
+            query = query,
+            onQueryChange = onQueryChange,
+            modifier = Modifier.testTag("searchBar")
+        )
         LazyVerticalGrid(
             columns = GridCells.Adaptive(160.dp),
             contentPadding = PaddingValues(16.dp),
@@ -69,7 +74,7 @@ fun HomeContent(
             verticalArrangement = Arrangement.spacedBy(16.dp),
             modifier = modifier
         ) {
-            items(orderFood) { data ->
+            items(foodList) { data ->
                 FoodItem(
                     id = data.id,
                     imageUrl = data.imageUrl,
