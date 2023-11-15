@@ -79,8 +79,8 @@ fun DetailScreen(
                     imageUrl = data.imageUrl,
                     name = data.name,
                     isFavorite = isFavorite,
-                    time = 20,
-                    rating = 4.8f,
+                    time = data.time,
+                    rating = data.rating,
                     ingredients = contentFormat(data.ingredients),
                     ways = contentFormat(data.ways)
                 )

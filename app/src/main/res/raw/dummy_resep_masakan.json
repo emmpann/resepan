@@ -23,7 +23,9 @@
         "Tambahkan kecap, garam, dan merica sesuai selera.",
         "Bisa ditambahkan telur, ayam, dan udang jika diinginkan."
       ],
-      "imageUrl": "https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/07/13073811/Praktis-dengan-Bahan-Sederhana-Ini-Resep-Nasi-Goreng-Special-1.jpg.webp"
+      "imageUrl": "https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/07/13073811/Praktis-dengan-Bahan-Sederhana-Ini-Resep-Nasi-Goreng-Special-1.jpg.webp",
+      "time": 30,
+      "rating": 4.5
     },
     {
       "id": 2,
@@ -39,7 +41,9 @@
         "Tusuk daging dengan tusuk sate.",
         "Panggang hingga matang."
       ],
-      "imageUrl": "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/03/19/resep-sate-ayam-manis_700x465-3932189309.jpg"
+      "imageUrl": "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/03/19/resep-sate-ayam-manis_700x465-3932189309.jpg",
+      "time": 45,
+      "rating": 4.8
     },
     {
       "id": 3,
@@ -57,7 +61,9 @@
         "Tambahkan serai, daun jeruk, dan daun salam.",
         "Masak hingga daging empuk dan kuah mengental."
       ],
-      "imageUrl": "https://www.astronauts.id/blog/wp-content/uploads/2023/03/Resep-Rendang-Daging-Sapi-Untuk-Lebaran-Gurih-dan-Nikmat-1024x683.jpg"
+      "imageUrl": "https://www.astronauts.id/blog/wp-content/uploads/2023/03/Resep-Rendang-Daging-Sapi-Untuk-Lebaran-Gurih-dan-Nikmat-1024x683.jpg",
+      "time": 180,
+      "rating": 4.9
     },
     {
       "id": 4,
@@ -74,7 +80,9 @@
         "Sajikan dengan tahu dan tempe goreng.",
         "Siram dengan bumbu kacang."
       ],
-      "imageUrl": "https://images2.prokal.co/webratar/files/berita/2023/06/06/bf42a5373dbbbb39254d52d90e4e24cc.png"
+      "imageUrl": "https://images2.prokal.co/webratar/files/berita/2023/06/06/bf42a5373dbbbb39254d52d90e4e24cc.png",
+      "time": 40,
+      "rating": 4.7
     },
     {
       "id": 5,
@@ -89,7 +97,9 @@
         "Suwir-suwir ayam.",
         "Sajikan dengan bihun dan ingredients pelengkap."
       ],
-      "imageUrl": "https://jogja.disway.id/upload/5f8893b14c6fe4e24da321d667a764d6.jpg"
+      "imageUrl": "https://jogja.disway.id/upload/5f8893b14c6fe4e24da321d667a764d6.jpg",
+      "time": 60,
+      "rating": 4.6
     },
     {
       "id": 6,
@@ -105,7 +115,9 @@
         "Goreng hingga kecokelatan.",
         "Sajikan dengan daun salam dan daun jeruk."
       ],
-      "imageUrl": "https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/07/14045037/Resep-Ayam-Kalasan-Mantap-Disantap-dengan-Bumbunya-.jpg.webp"
+      "imageUrl": "https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2023/07/14045037/Resep-Ayam-Kalasan-Mantap-Disantap-dengan-Bumbunya-.jpg.webp",
+      "time": 50,
+      "rating": 4.7
     },
     {
       "id": 7,
@@ -120,7 +132,9 @@
         "Haluskan bumbu pecel.",
         "Sajikan dengan lalap."
       ],
-      "imageUrl": "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/kulinear/2021/01/133933895_3569592479785744_7554704832760385227_n.jpg"
+      "imageUrl": "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/kulinear/2021/01/133933895_3569592479785744_7554704832760385227_n.jpg",
+      "time": 35,
+      "rating": 4.5
     },
     {
       "id": 8,
@@ -136,7 +150,9 @@
         "Bentuk bulat dan rebus.",
         "Sajikan dengan kuah dan mie."
       ],
-      "imageUrl": "https://cdn0-production-images-kly.akamaized.net/Ehz7vShJ10nVDvQ4xCe6yUEtwjg=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2763419/original/071857300_1553761217-shutterstock_1148354906.jpg"
+      "imageUrl": "https://cdn0-production-images-kly.akamaized.net/Ehz7vShJ10nVDvQ4xCe6yUEtwjg=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2763419/original/071857300_1553761217-shutterstock_1148354906.jpg",
+      "time": 50,
+      "rating": 4.8
     },
     {
       "id": 9,
@@ -151,7 +167,9 @@
         "Balut ikan dengan bumbu, bungkus dengan daun pisang.",
         "Panggang hingga matang."
       ],
-      "imageUrl": "https://cdn0-production-images-kly.akamaized.net/0tQlDWUK1qSZGl52iNX4chMSgiw=/0x64:999x627/680x383/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4341755/original/028075400_1677641966-shutterstock_1150963166.jpg"
+      "imageUrl": "https://cdn0-production-images-kly.akamaized.net/0tQlDWUK1qSZGl52iNX4chMSgiw=/0x64:999x627/680x383/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4341755/original/028075400_1677641966-shutterstock_1150963166.jpg",
+      "time": 55,
+      "rating": 4.7
     },
     {
       "id": 10,
@@ -165,7 +183,9 @@
         "Rebus sayuran dengan bumbu hingga matang.",
         "Tambahkan asam Jawa sesuai selera."
       ],
-      "imageUrl": "https://img.kurio.network/a3FBP6rZqpZi8nOhMaMINblKtcs=/440x440/filters:quality(80)/https://kurio-img.kurioapps.com/21/04/22/4b127e02-6ea1-4bfd-9d5c-22590c288b4a.jpe"
+      "imageUrl": "https://img.kurio.network/a3FBP6rZqpZi8nOhMaMINblKtcs=/440x440/filters:quality(80)/https://kurio-img.kurioapps.com/21/04/22/4b127e02-6ea1-4bfd-9d5c-22590c288b4a.jpe",
+      "time": 30,
+      "rating": 4.6
     },
     {
       "id": 11,
@@ -182,7 +202,9 @@
         "Iris bawang dan cabe, campur dengan garam dan gula.",
         "Tambahkan perasan jeruk nipis."
       ],
-      "imageUrl": "https://cdn.idntimes.com/content-images/community/2022/05/resep-sambal-paling-enak-resep-sambal-matah-sambal-matah-bali-sambel-matah-bahan-sambal-matah-tips-sambal-matah-9cde86371d7fc78c91ae80a6ffab250e-137dd82ad7bd32e2570eb6fc27660b5c_600x400.jpg"
+      "imageUrl": "https://cdn.idntimes.com/content-images/community/2022/05/resep-sambal-paling-enak-resep-sambal-matah-sambal-matah-bali-sambel-matah-bahan-sambal-matah-tips-sambal-matah-9cde86371d7fc78c91ae80a6ffab250e-137dd82ad7bd32e2570eb6fc27660b5c_600x400.jpg",
+      "time": 15,
+      "rating": 4.9
     },
     {
       "id": 12,
@@ -201,7 +223,9 @@
         "Masak nasi dengan santan dan bumbu lainnya.",
         "Sajikan dengan ayam, tahu, dan tempe."
       ],
-      "imageUrl": "https://img.kurio.network/kKGYD23N2b4cmK3Jp1TRVKW4W5Q=/440x440/filters:quality(80)/https://kurio-img.kurioapps.com/21/08/25/7a91d474-f479-4217-b7e6-af18188cb932.jpe"
+      "imageUrl": "https://img.kurio.network/kKGYD23N2b4cmK3Jp1TRVKW4W5Q=/440x440/filters:quality(80)/https://kurio-img.kurioapps.com/21/08/25/7a91d474-f479-4217-b7e6-af18188cb932.jpe",
+      "time": 45,
+      "rating": 4.7
     },
     {
       "id": 13,
@@ -218,7 +242,9 @@
         "Tambahkan sayuran dan bumbu sop.",
         "Sajikan dengan seledri."
       ],
-      "imageUrl": "https://asset.kompas.com/crops/ynh9dRv_y6hwQ8zdK1ACIhit7Ic=/0x17:974x667/750x500/data/photo/2021/07/15/60efaa05d301d.jpg"
+      "imageUrl": "https://asset.kompas.com/crops/ynh9dRv_y6hwQ8zdK1ACIhit7Ic=/0x17:974x667/750x500/data/photo/2021/07/15/60efaa05d301d.jpg",
+      "time": 45,
+      "rating": 4.8
     },
     {
       "id": 14,
@@ -234,7 +260,9 @@
         "Bentuk dan rebus.",
         "Sajikan dengan cuko."
       ],
-      "imageUrl": "https://asset-2.tstatic.net/aceh/foto/bank/images/Pempek-Dos-ala-Chef-Devina-Hermawan.jpg"
+      "imageUrl": "https://asset-2.tstatic.net/aceh/foto/bank/images/Pempek-Dos-ala-Chef-Devina-Hermawan.jpg",
+      "time": 55,
+      "rating": 4.8
     },
     {
       "id": 15,
@@ -253,7 +281,9 @@
         "Bungkus dengan kulit lumpia dan goreng.",
         "Sajikan dengan acar dan saus kacang."
       ],
-      "imageUrl": "https://cdn0-production-images-kly.akamaized.net/DGUDM_JhladnP3Jry0Y3DH2D4iY=/1x70:1000x633/680x383/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3540173/original/051308300_1628923102-shutterstock_2021524244.jpg"
+      "imageUrl": "https://cdn0-production-images-kly.akamaized.net/DGUDM_JhladnP3Jry0Y3DH2D4iY=/1x70:1000x633/680x383/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3540173/original/051308300_1628923102-shutterstock_2021524244.jpg",
+      "time": 50,
+      "rating": 4.9
     },
     {
       "id": 16,
@@ -271,7 +301,9 @@
         "Campur semua ingredients dalam mangkuk besar.",
         "Tambahkan es serut dan susu kental manis."
       ],
-      "imageUrl": "https://cdn0-production-images-kly.akamaized.net/7wc2FM-I8d-17lTeTK7vJOPlR-w=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/1256493/original/087686000_1465264987-urlnbdf.jpg"
+      "imageUrl": "https://cdn0-production-images-kly.akamaized.net/7wc2FM-I8d-17lTeTK7vJOPlR-w=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/1256493/original/087686000_1465264987-urlnbdf.jpg",
+      "time": 20,
+      "rating": 4.5
     },
     {
       "id": 17,
@@ -284,7 +316,9 @@
         "Iris buah-buahan dan campur dengan bumbu rujak.",
         "Sajikan dengan kuah rujak."
       ],
-      "imageUrl": "https://cdn0-production-images-kly.akamaized.net/YE2viX8atjnaewYuya7QfMY06qs=/0x335:5472x3419/680x383/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2721793/original/012900300_1549442300-shutterstock_1148177789.JPG"
+      "imageUrl": "https://cdn0-production-images-kly.akamaized.net/YE2viX8atjnaewYuya7QfMY06qs=/0x335:5472x3419/680x383/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2721793/original/012900300_1549442300-shutterstock_1148177789.JPG",
+      "time": 15,
+      "rating": 4.5
     },
     {
       "id": 18,
@@ -299,7 +333,9 @@
         "Rebus sayuran dengan bumbu lontong.",
         "Sajikan dengan lontong dan kelapa parut."
       ],
-      "imageUrl": "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/indizone/2023/04/20/jzs7JdY/6-resep-lontong-sayur-khas-betawi-padang-dan-medan-gurih29.jpg"
+      "imageUrl": "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/indizone/2023/04/20/jzs7JdY/6-resep-lontong-sayur-khas-betawi-padang-dan-medan-gurih29.jpg",
+      "time": 30,
+      "rating": 4.6
     },
     {
       "id": 19,
@@ -316,7 +352,9 @@
         "Potong pisang, celupkan dalam adonan tepung, goreng hingga kecokelatan.",
         "Tiriskan dan sajikan."
       ],
-      "imageUrl": "https://asset.kompas.com/crops/pas8vG76BDhkPELCiYn3WOgJT94=/137x72:798x513/750x500/data/photo/2022/07/21/62d8ed0d485d4.jpg"
+      "imageUrl": "https://asset.kompas.com/crops/pas8vG76BDhkPELCiYn3WOgJT94=/137x72:798x513/750x500/data/photo/2022/07/21/62d8ed0d485d4.jpg",
+      "time": 15,
+      "rating": 4.8
     },
     {
       "id": 20,
@@ -333,7 +371,9 @@
         "Campur dengan bumbu ketoprak.",
         "Sajikan dengan ketupat."
       ],
-      "imageUrl": "https://img-global.cpcdn.com/recipes/835a1524e8167639/1360x964cq70/ketoprak-foto-resep-utama.webp"
+      "imageUrl": "https://img-global.cpcdn.com/recipes/835a1524e8167639/1360x964cq70/ketoprak-foto-resep-utama.webp",
+      "time": 35,
+      "rating": 4.8
     }
   ]
 }

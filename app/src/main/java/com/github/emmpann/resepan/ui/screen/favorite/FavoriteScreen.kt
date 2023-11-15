@@ -73,8 +73,8 @@ fun FavoriteContent(
                         id = data.id,
                         imageUrl = data.imageUrl,
                         title = data.name,
-                        time = 20,
-                        rating = 5f,
+                        time = data.time,
+                        rating = data.rating,
                         modifier = Modifier.clickable {
                             navigateToDetail(data.id)
                         }
