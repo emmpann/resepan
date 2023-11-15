@@ -11,7 +11,6 @@ import com.github.emmpann.resepan.ui.components.SearchBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
@@ -31,7 +30,7 @@ fun HomeScreen(
     ),
     navigateToDetail: (Int) -> Unit,
 ) {
-    val query by remember { viewModel.query }
+    val query by viewModel.query
     viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
         when (uiState) {
             is UiState.Loading -> {
