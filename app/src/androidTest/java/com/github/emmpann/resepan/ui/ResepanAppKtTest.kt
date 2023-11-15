@@ -10,6 +10,7 @@ import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.testing.TestNavHostController
 import com.github.emmpann.resepan.R
 import com.github.emmpann.resepan.assertCurrentRouteName
+import com.github.emmpann.resepan.onNodeWithStringId
 import com.github.emmpann.resepan.ui.navigation.Screen
 import com.github.emmpann.resepan.ui.theme.ResepanTheme
 import org.junit.Before
@@ -39,9 +40,9 @@ class ResepanAppKtTest {
 
     @Test
     fun navHost_bottomNavigation_working() {
-        composeTestRule.onNodeWithText("Favorite").performClick()
+        composeTestRule.onNodeWithStringId(R.string.menu_favortie).performClick()
         navController.assertCurrentRouteName(Screen.Favorite.route)
-        composeTestRule.onNodeWithText("About").performClick()
+        composeTestRule.onNodeWithStringId(R.string.menu_about).performClick()
         navController.assertCurrentRouteName(Screen.About.route)
     }
 
@@ -49,7 +50,8 @@ class ResepanAppKtTest {
     fun navHost_clickItem_navigatesBack() {
         composeTestRule.onNodeWithText("Nasi Goreng").performClick()
         navController.assertCurrentRouteName(Screen.DetailFood.route)
-        composeTestRule.onNodeWithContentDescription(composeTestRule.activity.getString(R.string.back)).performClick()
+        composeTestRule.onNodeWithContentDescription(composeTestRule.activity.getString(R.string.back))
+            .performClick()
         navController.assertCurrentRouteName(Screen.Home.route)
     }
 
