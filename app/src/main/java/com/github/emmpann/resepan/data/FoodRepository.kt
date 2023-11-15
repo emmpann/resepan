@@ -28,8 +28,6 @@ class FoodRepository(context: Context) {
         }
     }
 
-    fun getAllRecipe(): Flow<List<Food>> = flowOf(recipes)
-
     fun getFoodById(foodId: Int) = recipes.first { it.id == foodId }
 
     fun searchFood(query: String): Flow<List<Food>> = flowOf(
@@ -43,11 +41,11 @@ class FoodRepository(context: Context) {
         favoriteRecipes.add(food)
     }
 
-    fun getFavoriteRecipes(foodId: Int): Flow<Food?> =
+    fun getFavoriteRecipesById(foodId: Int): Flow<Food?> =
         flowOf(favoriteRecipes.find { it.id == foodId })
 
     fun getAllFavoriteRecipes(): Flow<List<Food>> = flowOf(favoriteRecipes)
-    fun deleteFavoriteRecipe(foodId: Int) {
+    fun deleteFavoriteRecipeById(foodId: Int) {
         favoriteRecipes.removeIf { it.id == foodId }
     }
 

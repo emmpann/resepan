@@ -40,13 +40,13 @@ class DetailFoodViewModel(
     fun getFavoriteRecipe(foodId: Int) {
         viewModelScope.launch {
             _isFavorite.value =
-                repository.getFavoriteRecipes(foodId).firstOrNull()?.isFavorite ?: false
+                repository.getFavoriteRecipesById(foodId).firstOrNull()?.isFavorite ?: false
         }
     }
 
     private fun deleteFavoriteRecipe(foodId: Int) {
         viewModelScope.launch {
-            repository.deleteFavoriteRecipe(foodId)
+            repository.deleteFavoriteRecipeById(foodId)
         }
     }
 }

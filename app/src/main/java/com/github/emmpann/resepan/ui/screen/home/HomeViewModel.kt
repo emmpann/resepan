@@ -21,19 +21,7 @@ class HomeViewModel(
     private val _query = mutableStateOf("")
     val query: State<String> get() = _query
 
-    fun getAllRecipe() {
-        viewModelScope.launch {
-            repository.getAllRecipe()
-                .catch {
-                    _uiState.value = UiState.Error(it.message.toString())
-                }
-                .collect { orderFood ->
-                    _uiState.value = UiState.Success(orderFood)
-                }
-        }
-    }
-
-    fun search(newQuery: String) {
+    fun getAllRecipe(newQuery: String) {
         _query.value = newQuery
         viewModelScope.launch {
             repository.searchFood(_query.value)
